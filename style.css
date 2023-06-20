@@ -1,0 +1,28 @@
+:root {
+    /* main section colors for text and background: */
+    --first-color: black;
+    --first-background-color: whitesmoke;
+    /* menu section colors for text and background: */
+    --second-color: rgb(59, 58, 58);
+    --second-background-color: lightgray;
+    /* accent elements, buttons, take action: */
+    --first-accent-color: red;
+    /* links colors: */
+    --second-accent-color: rgb(255, 147, 7);
+    
+}
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { background: var(--first-background-color); url("images/1.jpeg") center center no-repeat;
+    background-size: cover; color: var(--first-color); }
+
+body { display: block; /* grid = best option */ place-items: center; 
+    margin: 0; font-family: Inter, Helvetica, Arial, sans-serif;
+    font-size: 16px; line-height: 1.5em; /* 1em = font-size */ }
+    @media (min-width: 500px) { body { display: grid; } }
+
+a { color: var(--second-color); text-decoration: none; }
+a:hover { color: --second-accent-color; }
+
