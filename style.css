@@ -1,28 +1,50 @@
 :root {
-    /* main section colors for text and background: */
-    --first-color: black;
-    --first-background-color: whitesmoke;
-    /* menu section colors for text and background: */
-    --second-color: rgb(59, 58, 58);
-    --second-background-color: lightgray;
-    /* accent elements, buttons, take action: */
-    --first-accent-color: red;
-    /* links colors: */
-    --second-accent-color: rgb(255, 147, 7);
-    
+    /* neutral colors */
+    --neutral-dark: #070707;
+    --neutral-medium-dark: #383838;
+    --neutral-medium-light: #797979;
+    --neutral-light: #f1f1f1;
+    /* accent colors*/
+    --accent-color-0: rgb(245, 7, 7);
+    --accent-color-1: rgb(250, 77, 7);
+    --accent-color-2: rgb(255, 147, 7);
+    --accent-color-3: rgb(147, 7, 255);
 }
+
+
+.ColorSetHeader { color: var(--neutral-light); background-color: var(--neutral-medium-dark); }
+.ColorSetMain1 { color: var(--neutral-light); background-color: var(--neutral-medium-dark); }
+.ColorSetMain2 { color: var(--neutral-light); background-color: var(--neutral-medium-dark); }
+
 
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { background: var(--first-background-color); url("images/1.jpeg") center center no-repeat;
+html { background: var(--first-background-color) url("images/1.jpeg") center center no-repeat;
     background-size: cover; color: var(--first-color); }
 
 body { display: block; /* grid = best option */ place-items: center; 
-    margin: 0; font-family: Inter, Helvetica, Arial, sans-serif;
+    font-family: Inter, Helvetica, Arial, sans-serif;
     font-size: 16px; line-height: 1.5em; /* 1em = font-size */ }
-    @media (min-width: 500px) { body { display: grid; } }
+    /* @media (min-width: 500px) { body { display: grid; } */ }
+
+h1 { padding: 2rem 0 0; }
+
+h2 { padding: 4rem 0 0; line-height: 1.5em; }
+
+h3 { padding: 2.5rem 0 1rem; }
+
+ul {list-style-type: none; }
 
 a { color: var(--second-color); text-decoration: none; }
-a:hover { color: --second-accent-color; }
+a:hover { color: --second-accent-color; cursor: pointer; }
+
+.Container { }
+
+header { display: flex; justify-content: space-between; }
+
+.PageElement { display: flex; justify-content: center; }
+    .PageElementList { width: clamp(30rem, 80vw, 50rem); text-align: center; }
+        .InsideList { display: flex; justify-content: center; }
+            .InsideList li { margin: clamp(1rem, 5vw, 1rem); border: 1px solid gray; width: 6.5rem; border-radius: 1rem;}
 
